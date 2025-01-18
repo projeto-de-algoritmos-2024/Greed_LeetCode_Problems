@@ -8,13 +8,68 @@
 3. [#1489. Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree](#1489-find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree-)
 
 ## #881. Boats to Save People 🔶
+You are given an array people where people[i] is the weight of the ith person, and an infinite number of boats where each boat can carry a maximum weight of limit. Each boat carries at most two people at the same time, provided the sum of the weight of those people is at most limit.
 
+Return the minimum number of boats to carry every given person.
+
+Example 1:
+
+Input: people = [1,2], limit = 3
+
+Output: 1
+
+Explanation: 1 boat (1, 2)
+
+Example 2:
+
+Input: people = [3,2,2,1], limit = 3
+
+Output: 3
+
+Explanation: 3 boats (1, 2), (2) and (3)
+
+Example 3:
+
+Input: people = [3,5,3,4], limit = 5
+
+Output: 4
+
+Explanation: 4 boats (3), (3), (4), (5)
 
 ## Como resolvemos?
 ...
 
 ## #630. Course Schedule III 🔴
+There are n different online courses numbered from 1 to n. You are given an array courses where courses[i] = [durationi, lastDayi] indicate that the ith course should be taken continuously for durationi days and must be finished before or on lastDayi.
 
+You will start on the 1st day and you cannot take two or more courses simultaneously.
+
+Return the maximum number of courses that you can take.
+
+Exemple 1:
+
+Input: courses = [[100,200],[200,1300],[1000,1250],[2000,3200]]
+
+Output: 3
+
+Explanation: 
+There are totally 4 courses, but you can take 3 courses at most:
+First, take the 1st course, it costs 100 days so you will finish it on the 100th day, and ready to take the next course on the 101st day.
+Second, take the 3rd course, it costs 1000 days so you will finish it on the 1100th day, and ready to take the next course on the 1101st day. 
+Third, take the 2nd course, it costs 200 days so you will finish it on the 1300th day. 
+The 4th course cannot be taken now, since you will finish it on the 3300th day, which exceeds the closed date.
+
+Example 2:
+
+Input: courses = [[1,2]]
+
+Output: 1
+
+Example 3:
+
+Input: courses = [[3,2],[4,3]]
+
+Output: 0
 
 
 ## Como resolvemos?
@@ -33,7 +88,9 @@ Exemple 1:
 ![ex1](img/ex1_1.png)
 
 Input: n = 5, edges = [[0,1,1],[1,2,1],[2,3,2],[0,3,2],[0,4,3],[3,4,3],[1,4,6]]
+
 Output: [[0,1],[2,3,4,5]]
+
 Explanation: The figure above describes the graph.
 The following figure shows all the possible MSTs:
 
@@ -47,7 +104,9 @@ Example 2:
 ![ex2](img/ex_2.png)
 
 Input: n = 4, edges = [[0,1,1],[1,2,1],[2,3,1],[0,3,1]]
+
 Output: [[],[0,1,2,3]]
+
 Explanation: We can observe that since all 4 edges have equal weight, choosing any 3 edges from the given 4 will yield an MST. Therefore all 4 edges are pseudo-critical.
 
 
