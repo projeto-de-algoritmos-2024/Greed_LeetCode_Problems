@@ -37,7 +37,9 @@ Output: 4
 Explanation: 4 boats (3), (3), (4), (5)
 
 ## Como resolvemos?
-...
+Esse exercício foi bem tranquilo de resolver com a estratégia de algoritmos ambiciosos. Como sempre, precisamos ordenar o vetor, ordenamos por peso, do menor para o maior, e a ideia era smepre tentar colocar alguém com menor peso com alguém de maior peso no mesmo barco, isso se não extrapolasse o limite.
+
+Foi um código bem simples de ser implementado, bastou ter a ideia. E a lógica no código é colocar dois ponteiros, um na ponta da esquerda e outro na direita, e enquanto o ponteiro da esquerda for menor ou igual ao da direita, iteramos. Para cada iteração víamos se cabe um de maior peso com um de menor, se sim, eu incremento o ponteiro da esquerda, se não, apenas decremento o ponteiro da direita, isso significa que o mais pesado precisou de um barco só pra ele. E o número de barcos sempre vai incrementando a cada iteração.
 
 ## #630. Course Schedule III 🔴
 There are n different online courses numbered from 1 to n. You are given an array courses where courses[i] = [durationi, lastDayi] indicate that the ith course should be taken continuously for durationi days and must be finished before or on lastDayi.

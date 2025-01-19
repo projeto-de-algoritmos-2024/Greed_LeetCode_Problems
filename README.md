@@ -20,6 +20,8 @@ Esse projeto tem como objetivo armazenar as resoluções feitas dos seguintes ex
 
 #881. Boats to Save People
 
+![881](img/881.jpeg)
+
 #630. Course Schedule III
 
 #1489. Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree
