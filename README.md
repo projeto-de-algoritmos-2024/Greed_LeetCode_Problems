@@ -24,6 +24,8 @@ Esse projeto tem como objetivo armazenar as resoluções feitas dos seguintes ex
 
 #630. Course Schedule III
 
+![630](img/630.png)
+
 #1489. Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree
 
 ![1489](img/1489.png)

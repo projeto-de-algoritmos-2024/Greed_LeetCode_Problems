@@ -37,7 +37,7 @@ Output: 4
 Explanation: 4 boats (3), (3), (4), (5)
 
 ## Como resolvemos?
-Esse exercício foi bem tranquilo de resolver com a estratégia de algoritmos ambiciosos. Como sempre, precisamos ordenar o vetor, ordenamos por peso, do menor para o maior, e a ideia era smepre tentar colocar alguém com menor peso com alguém de maior peso no mesmo barco, isso se não extrapolasse o limite.
+Esse exercício foi bem tranquilo de resolver com a estratégia de algoritmos ambiciosos. Como sempre, precisamos ordenar o vetor, ordenamos por peso, do menor para o maior, e a ideia era sempre tentar colocar alguém com menor peso com alguém de maior peso no mesmo barco, isso se não extrapolasse o limite.
 
 Foi um código bem simples de ser implementado, bastou ter a ideia. E a lógica no código é colocar dois ponteiros, um na ponta da esquerda e outro na direita, e enquanto o ponteiro da esquerda for menor ou igual ao da direita, iteramos. Para cada iteração víamos se cabe um de maior peso com um de menor, se sim, eu incremento o ponteiro da esquerda, se não, apenas decremento o ponteiro da direita, isso significa que o mais pesado precisou de um barco só pra ele. E o número de barcos sempre vai incrementando a cada iteração.
 
@@ -75,7 +75,13 @@ Output: 0
 
 
 ## Como resolvemos?
-...
+A ideia para resolver esse problema, é implementar o algoritmo visto em sala do Interval Scheduling, com uma leve modificação. Basicamente ordenamos os cursos pelo dia de fim daquele curso e guardaremos em um heap, a duração dos cursos escolhidos. No fim, o tamanho do heap será a resposta de quantos curso é possível fazer.
+
+A leve modificação do Interval Scheduling normal, é a forma de verificar se os cursos são compatíveis ou não. Enquanto no algoritmo visto em sala, bastava ver se o horário de início (s) era maior ou igual do que o horário de fim (f) da última tarefa adicionada, aqui iremos usar as durações dos cursos. 
+
+Iremos ir guardando em uma variável o tempo total que está sendo passado, que será a soma das durações dos cursos à medida que forem entrando no heap, caso o valor dessa variável seja maior do que o prazo desse dia, retiramos ele do heap, e decrementamos a duração desse curso da nossa variável.
+
+Isso faz com que a iteração tenha uma verificação, do tipo "consigo pegar esse curso, tendo em vista o curso que já peguei?", e por fim o número de elementos no heap, será a exata máxima quantidade de cursos que é ppossível pegar. Esse problema pode ser confundido com o de Minimize Max Lateness, porém a premissa aqui é conseguir pegar o máximo de cursos (Inteval Scheduling), diferente de fazer todos os cursos.
 
 ## #1489. Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree 🔴
 
